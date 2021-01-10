@@ -171,6 +171,28 @@ If not specified, it will fail at startup.
 
 ```sh
 [root@ubuntu:~/SpringJnrCpp/springboot]$ java -jar ./build/libs/springjnr-0.0.1-SNAPSHOT.jar
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.3.5.RELEASE)
+
+2021-01-10 23:26:44.707  INFO 268 --- [           main] c.d.pej.springjnr.SpringjnrApplication   : Starting SpringjnrApplication on pej with PID 268 (/root/SpringJnrCpp/springboot/build/libs/springjnr-0.0.1-SNAPSHOT.jar started by root in /root/SpringJnrCpp/springboot)
+2021-01-10 23:26:44.717  INFO 268 --- [           main] c.d.pej.springjnr.SpringjnrApplication   : No active profile set, falling back to default profiles: default
+2021-01-10 23:26:46.024  INFO 268 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-01-10 23:26:46.036  INFO 268 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-01-10 23:26:46.037  INFO 268 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2021-01-10 23:26:46.108  INFO 268 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-01-10 23:26:46.109  INFO 268 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1261 ms
+2021-01-10 23:26:46.462  INFO 268 --- [           main] datadog.trace.core.StatusLogger          : DATADOG TRACER CONFIGURATION {"version":"0.68.0~ca80da2a6","os_name":"Linux","os_version":"5.8.0-36-generic","architecture":"amd64","lang":"jvm","lang_version":"13.0.4","jvm_vendor":"Private Build","jvm_version":"13.0.4+8-Ubuntu-120.04","java_class_version":"57.0","http_nonProxyHosts":"null","http_proxyHost":"null","enabled":true,"service":"springjnr-0.0.1-SNAPSHOT","agent_url":"http://localhost:8126","agent_error":true,"debug":false,"analytics_enabled":false,"sampling_rules":[{},{}],"priority_sampling_enabled":true,"logs_correlation_enabled":false,"profiling_enabled":false,"dd_version":"0.68.0~ca80da2a6","health_checks_enabled":true,"configuration_file":"no config file present","runtime_id":"b0f3c086-e599-489d-afb2-26703de756c8"}
+2021-01-10 23:26:46.779  INFO 268 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-10 23:26:47.032  INFO 268 --- [           main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2021-01-10 23:26:47.058  INFO 268 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-01-10 23:26:47.148  INFO 268 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-01-10 23:26:47.167  INFO 268 --- [           main] c.d.pej.springjnr.SpringjnrApplication   : Started SpringjnrApplication in 3.155 seconds (JVM running for 3.603)
 ```
 
 ### Testing the app
