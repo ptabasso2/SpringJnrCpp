@@ -1,0 +1,38 @@
+version: "3"
+services:
+  springjnr:
+    container_name: springjnr
+    hostname: ubuntu
+    image: springjnrimg:latest 
+    environment:
+      - DD_AGENT_HOST=dd-agent
+    stdin_open: true
+    tty: true
+#    networks:
+#      - nw
+
+  datadog:
+    container_name: dd-agent
+    hostname: dd-agent
+    image: datadog/agent:7
+    environment:
+      - DD_HOSTNAME=dd-agent
+      - DD_APM_ENABLED=true
+      - DD_API_KEY
+      - DD_PROCESS_AGENT_ENABLED=true
+      - DD_DOGSTATSD_NON_LOCAL_TRAFFIC=true
+      - DD_APM_NON_LOCAL_TRAFFIC=true
+      - DD_LOG_LEVEL=debug
+    ports:
+     - "8125:8125"
+     - "8126:8126"
+    volumes:
+      - '/proc/:/host/proc/:ro'
+      - '/sys/fs/cgroup/:/host/sys/fs/cgroup:ro'
+      - '/var/run/docker.sock:/var/run/docker.sock:ro'
+#    networks:
+#      - nw
+
+#networks:
+#  nw:
+#    external: true
