@@ -14,7 +14,7 @@ RUN wget https://services.gradle.org/distributions/gradle-6.5.1-bin.zip -P /tmp 
 ENV JAVA_HOME /usr/lib/jvm/java-13-openjdk-amd64 
 ENV GRADLE_HOME /opt/gradle/latest
 ENV PATH /opt/gradle/latest/bin:${PATH}
-ENV LD_LIBRARY_PATH=/root/dd-opentracing-cpp/.build:/root/SpringJnrCpp/cpp/lib
+ENV LD_LIBRARY_PATH=/root/dd-opentracing-cpp/.build:/root/opentracing-cpp/.build/output:/root/SpringJnrCpp/cpp/lib
 
 
 WORKDIR /root
