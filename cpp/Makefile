@@ -57,13 +57,13 @@ JVM_INCLUDE=-I${JAVA_HOME}/include -I${JAVA_HOME}/include/$(ARCH) \
 all: compilec
 
 compilec:
-        g++ -std=c++14 -g -shared -fpic c/springjnr.cpp -o lib/libspringjnr.so -ldd_opentracing -lopentracing
+	g++ -std=c++14 -g -shared -fpic c/springjnr.cpp -o lib/libspringjnr.so -ldd_opentracing -lopentracing
 
 clean: clean-common
-        $(call rm-test,c/passHashMap.h)
+	$(call rm-test,c/passHashMap.h)
 
 clean-common:
-        @test -z "target/*" || rm -rf target/*
-        @test -z "lib/*" || rm -rf lib/*
+	@test -z "target/*" || rm -rf target/*
+	@test -z "lib/*" || rm -rf lib/*
 
 
